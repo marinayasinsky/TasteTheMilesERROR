@@ -10,11 +10,12 @@ Savor the journey, fuel your run! Taste the Miles is a fun and engaging MERN-sta
 
 
 ## Features
-- User authentication with secure sign-up, log in, and log out
-- Personalized marathon training plans based on user's fitness level, target time, and schedule
-- Tailored nutrition guidance, including meal suggestions and hydration recommendations
-- Performance tracking with integration of wearable devices and fitness apps
-- Social features for connecting with fellow runners and sharing progress
+
+- User Authentication (Sign-up, Log in & Log out)
+- User Profile (Display and edit basic information like name, email, and fitness level)
+- Training Plan Generation (Generate a simple, static training plan based on the user's fitness level and target marathon time)
+- Nutrition Tips Page (General nutrition advice and guidelines for marathon training)
+
 
 ## Technologies Used
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
@@ -25,12 +26,10 @@ Savor the journey, fuel your run! Taste the Miles is a fun and engaging MERN-sta
 ![Trello](https://img.shields.io/badge/Trello-0052CC?style=for-the-badge&logo=trello&logoColor=white)
 
 
-## Installation and Setup
-1. Clone this repository and navigate to the project directory.
-2. Install dependencies by running `npm install`.
-3. Set up environment variables for the database and other required services.
-4. Run the development server with `npm run dev`.
-5. Visit `http://localhost:3000` in your browser to view the app.
+## Project Links
+
+- [Trello Board](https://trello.com/b/qJMbybIZ/tastethemiles)
+- [GitHub Repository](https://github.com/marinayasinsky/TasteTheMiles)
 
 ## Future Enhancements
 - Expand training modules for different race distances
