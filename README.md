@@ -1,6 +1,6 @@
 # Taste the Miles
 
-Savor the journey, fuel your run! Taste the Miles is a fun and engaging MERN-stack app designed to help marathon runners create personalized training plans, access tailored nutrition guidance, and connect with fellow runners. The app offers a user-friendly interface, seamless integration with popular wearable devices, and a supportive community.
+Taste the Miles is a fun and engaging app for marathon runners, helping them prepare for their races by providing personalized training plans and nutrition advice.
 
 ## Table of Contents
 - [Features](#features)
