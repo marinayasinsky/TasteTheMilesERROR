@@ -21,6 +21,8 @@ const userSchema = new Schema({
     minLength: 3,
     required: true,
   },
+  fitnessLevel: { type: String, default: 'beginner' },
+  targetMarathonTime: { type: Number, default: 0 },
 }, {
     timestamps: true,
     toJSON: function(doc, ret) {
