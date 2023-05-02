@@ -1,11 +1,5 @@
 // * The users-service.js module will definitely need to make AJAX requests to the Express server.
-
 import { getToken } from "./users-service";
-
-//* SignUpForm.jsx <--> users-service.js <--> users-api.js <-Internet-> server.js (Express)
-
-//* handleSubmit <--> [signUp]-users-service <--> [signUp]-users-api <-Internet-> server.js (Express)
-
 
 const BASE_URL = '/api/users';
 
@@ -14,7 +8,6 @@ export function signUp(userData) {
   return sendRequest(BASE_URL, 'POST', userData);
 }
 
-
 //* Login
 export function login(credentials) {
   return sendRequest(`${BASE_URL}/login`, 'POST', credentials);
@@ -22,21 +15,28 @@ export function login(credentials) {
 
 //* Check Token
 export function checkToken() {
-    return sendRequest(`${BASE_URL}/check-token`)
-} 
+  return sendRequest(`${BASE_URL}/check-token`);
+}
+
+//* Create Workout
+export function createWorkout(workoutData) {
+  return sendRequest(`${BASE_URL}/workouts`, 'POST', workoutData);
+}
+
+//* Create Training Plan
+export function createTrainingPlan(planData) {
+  return sendRequest(`${BASE_URL}/trainingPlans`, 'POST', planData);
+}
 
 /*--- Helper Functions ---*/
 
 async function sendRequest(url, method = 'GET', payload = null) {
-  // Fetch accepts an options object as the 2nd argument
-  // used to include a data payload, set headers, etc.
   const options = { method };
   if (payload) {
     options.headers = { 'Content-Type': 'application/json' };
     options.body = JSON.stringify(payload);
   }
 
-  // sends token to backend
   const token = getToken();
 
   if (token) {
@@ -45,7 +45,6 @@ async function sendRequest(url, method = 'GET', payload = null) {
   }
 
   const res = await fetch(url, options);
-  // res.ok will be false if the status code set to 4xx in the controller action
   if (res.ok) return res.json();
   throw new Error('Bad Request');
 }
